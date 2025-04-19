@@ -1,12 +1,45 @@
 ---
 import AppleMesh from '../components/AppleMesh.astro';
+import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
+import Toeic from '../components/Toeic.astro';
+import Autolang from '../components/Autolang.astro';
+import Vocatale from '../components/Vocatale.astro';
+import Digit from '../components/Digit.astro';
+import AppleMeshEnd from '../components/AppleMeshEnd.astro';
+import Footer from '../components/Footer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<AppleMesh />
-	<h1> hi</h1>
+    <Navbar />
+    <div class="component-container">
+        <AppleMesh />
+        <div class="white-spacer"></div>
+        <Toeic />
+		<div class="white-spacer"></div>
+		<Autolang />
+		<div class="white-spacer"></div>
+		<Vocatale />
+		<div class="white-spacer"></div>
+		<Digit />
+		<div class="white-spacer"></div>
+		<AppleMeshEnd />
+		<div class="white-spacer"></div>
+		<Footer />
+    </div>
 </Layout>
+
+<style>
+    .component-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .white-spacer {
+        height: 12px;
+        background-color: white;
+    }
+</style>

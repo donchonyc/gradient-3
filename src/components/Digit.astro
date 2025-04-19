@@ -1,0 +1,173 @@
+<div class="background-container">
+    <div class="container">     
+    <h1 class="title">Digit</h1>
+        <p class="subtitle">게임처럼 즐기며 스페인어 자연스럽게 마스터.</p>
+        <a href="https://www.autolang.co" class="app-button">앱스토어로 이동</a>
+    </div>
+    <div class="autolang-img">
+        <img 
+            src="/autolang_img.png" 
+            srcset="/autolang_img.png 1x, 
+                /autolang_img@2x.png 2x, 
+                /autolang_img@3x.png 3x"
+            alt="오토랭 앱 화면" 
+        />
+    </div>
+</div>
+  
+<style>
+    .background-container {
+        background: #131314; /* Added dark background */
+    }
+
+  .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 805px;
+    max-height: 650px;
+    flex-shrink: 0;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 36px;
+  }
+  
+  .autolang-img {
+    width: 499px;
+    height: 416.5px;
+    flex-shrink: 0;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 38px;
+  }
+  
+  .autolang-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 14px 30px rgba(0, 0, 0, 0.10));
+  }
+  
+  .title {
+    color: #FFFFFF; /* Changed to white for dark background */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+  
+  .subtitle {
+    color: #FFFFFF; /* Changed to white for dark background */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+  }
+  
+  .app-button {
+    color: #FFFFFF; /* Changed to white text */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: #0071E3; /* Changed to blue fill */
+    cursor: pointer;
+    text-decoration: none;
+    
+    /* Updated button styling */
+    display: flex;
+    padding: 11px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32px;
+    border: none; /* Removed border since we have a filled background */
+    margin-bottom: 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 700px;
+      max-height: 600px;
+    }
+    
+    .title {
+      font-size: 42px;
+      margin-bottom: 14px;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    
+    .autolang-img {
+      width: 440px;
+      height: 367px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 90%;
+      max-height: 550px;
+    }
+    
+    .title {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    
+    .subtitle {
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+    
+    .app-button {
+      font-size: 16px;
+      padding: 10px 16px;
+    }
+    
+    .autolang-img {
+      width: 380px;
+      height: 317px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 95%;
+      padding-bottom: 25px;
+    }
+    
+    .title {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    
+    .app-button {
+      font-size: 15px;
+      padding: 9px 14px;
+      margin-bottom: 15px;
+    }
+    
+    .autolang-img {
+      width: 280px;
+      height: 234px;
+    }
+  }
+</style>

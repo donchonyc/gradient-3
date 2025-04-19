@@ -11,23 +11,10 @@ import astroLogo from '../assets/astro.svg';
     </div>
   </div>
   
-  <div class="iphone-grid-container">
-    <img 
-      src="/iphone-grid2.png"
-      srcset="
-        /iphone-grid2.png 320w,
-        /iphone-grid2@2x.png 640w,
-        /iphone-grid2@3x.png 960w"
-      sizes="(max-width: 480px) 280px,
-             (max-width: 768px) 320px,
-             (max-width: 1024px) 380px,
-             420px"
-      alt="iPhone App Grid" 
-      class="iphone-grid-image">
-  </div>
-  
   <main>
-    <h1>언어와 함께, <br /> 더 효율적으로</h1>
+    <h1>저희의 미션은 새로운 <br />언어를 가장 빠르게 <br/>배우는 방법을 만드는 데에 있습니다</h1>
+    <div class="spacer"></div>
+    <a href="#" class="join-button">Join our team</a>
   </main>
 </div>
 
@@ -181,13 +168,14 @@ import astroLogo from '../assets/astro.svg';
   }
 
   h1 {
-    font-size: clamp(32px, 7vw, 58px); /* Fluid font size for mobile */
+    /* Reduced font size */
+    font-size: clamp(28px, 5vw, 42px); /* Smaller fluid font size for mobile */
     font-weight: 600;
     text-align: center;
-    line-height: 1.15; /* Slightly more spacing for mobile */
-    letter-spacing: -0.02em; /* Tighter letter spacing like Apple */
+    line-height: 1.2;
+    letter-spacing: -0.02em;
     font-family: -apple-system, 'SF Pro Display', 'Spoqa Han Sans Neo', system-ui, sans-serif;
-    max-width: 800px; /* Limit width for better readability */
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -195,17 +183,16 @@ import astroLogo from '../assets/astro.svg';
   /* Tablet/iPad */
   @media (min-width: 768px) {
     h1 {
-      font-size: clamp(42px, 7.5vw, 86px);
-      line-height: 1.1;
+      font-size: clamp(32px, 5.5vw, 52px); /* Reduced size */
+      line-height: 1.15;
     }
   }
 
   /* Desktop */
   @media (min-width: 1024px) {
     h1 {
-      font-size: clamp(48px, 8vw, 112px); /* Higher maximum on desktop */
-      line-height: 1.05; /* Tighter line height for larger text */
-      padding: 0 30px;
+      font-size: clamp(36px, 6vw, 64px); /* Reduced max size */
+      line-height: 1.1;
     }
   }
 
@@ -238,6 +225,16 @@ import astroLogo from '../assets/astro.svg';
     position: relative;
     z-index: 3;
     margin-bottom: 180px; /* Create space for phone below text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Add fixed spacer element */
+  .spacer {
+    height: 48px; /* Fixed height regardless of text content */
+    width: 100%;
   }
 
   /* Reposition iPhone grid image like in reference */
@@ -293,6 +290,35 @@ import astroLogo from '../assets/astro.svg';
     
     main {
       margin-bottom: 160px; /* Less space for smaller image */
+    }
+
+    /* You can adjust spacer for mobile if needed */
+    .spacer {
+      height: 40px;
+    }
+  }
+
+  /* Add button styling */
+  .join-button {
+    display: inline-flex;
+    padding: 12px 24px;
+    background-color: var(--text);
+    color: var(--background);
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    /* removed margin-top */
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Spoqa Han Sans Neo', -apple-system, system-ui, sans-serif;
+  }
+  
+  @media (max-width: 480px) {
+    .join-button {
+      font-size: 16px;
+      padding: 10px 20px;
     }
   }
 </style>

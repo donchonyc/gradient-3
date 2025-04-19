@@ -1,0 +1,144 @@
+---
+// Footer component with product and company links
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-columns">
+      <div class="footer-column company-info">
+        <p class="company-name">ApeiroCorp.</p>
+        <div class="address-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+            <path d="M6.45 11L5.025 7.475L1.5 6.05V5.35L10.5 2L7.15 11H6.45ZM6.775 9.15L8.8 3.7L3.35 5.725L5.8 6.7L6.775 9.15Z" fill="white"/>
+          </svg>
+          <span class="address">한국 성남시</span>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="#">토익단어</a></li>
+          <li><a href="#">AutoLang</a></li>
+          <li><a href="#">VOCATALE</a></li>
+          <li><a href="#">Digit</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <span class="apeiro">Apeiro</span>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2025 APEIROCORP/ TERMS OF USE/ PRIVACY POLICY/ CODE OF CONDUCT</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Import Lexend font for the Apeiro logo */
+  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&display=swap');
+  /* Import Spoqa Han Sans Neo for company name */
+  @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+
+  .footer {
+    background-color: #000;
+    color: white;
+    padding: 2rem 0;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .footer-columns {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-column {
+    margin-right: 96px; /* 96px between columns */
+  }
+
+  .company-name {
+    color: #FFF;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+  }
+
+  .address-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .address {
+    color: #FFF;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 0.5;
+  }
+  
+  .footer-column h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 8px; /* 8px vertical margin between items */
+  }
+  
+  .footer-column a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  
+  .apeiro {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .footer-legal {
+    color: #888;
+    font-size: 0.75rem;
+  }
+  
+  .footer-legal p {
+    margin: 0;
+  }
+</style>
