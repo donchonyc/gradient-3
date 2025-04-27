@@ -1,0 +1,576 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AppleMesh3 from '../components/AppleMesh3.astro';
+import WorkApeiro from '../components/WorkApeiro.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="채용 - Apeiro">
+  <Navbar />
+  <div class="component-container">
+    <AppleMesh3 />
+    <div class="white-spacer"></div>
+    <WorkApeiro />
+    <div class="white-spacer"></div>
+    
+    <section class="career-container">
+      <div class="now-hiring-badge">
+        <span class="pulse"></span>
+        <span class="text">NOW HIRING</span>
+      </div>
+      
+      <h1 class="title">소프트웨어 개발자 모집</h1>
+      <p class="subtitle">🏴‍☠️ 안녕하세요, 아페로 선에 승선을 고민해주셔서 감사합니다! 🏴‍☠️</p>
+      <p class="warning-banner">⚠️ 아페로는 최근에 막 투자를 유치한 신생 스타트업으로서 큰 꿈이나 개인의 성장에 관심이 없는 심약자 분들에겐 적합하지 않을 수 있습니다 ⚠️</p>
+      
+      <div class="job-details-container">
+        <div class="job-column">
+          <div class="job-section">
+            <h2>주요업무</h2>
+            <ul>
+              <li>Flutter 기반 모바일앱 개발</li>
+            </ul>
+          </div>
+          
+          <div class="job-section">
+            <h2>자격요건</h2>
+            <ul>
+              <li>2년 이상의 Flutter 개발 경력을 보유하신 분</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="job-column">
+          <div class="job-section">
+            <h2>우대사항</h2>
+            <ul>
+              <li>Python 개발 경험이 있으신 분</li>
+              <li>모바일앱 서비스 배포 및 운영 경험이 있으신 분</li>
+              <li>외국어 공부에 관심이 있으신 분</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="white-spacer"></div>
+    
+    <section class="benefits-container">
+      <h1 class="title">왜 조인해야하나요?</h1>
+      <p class="subtitle">초기 스타트업을 조인하는 것은 확실히 양날의 검입니다. 우선 아페로는 바로 글로벌 시장을 노리고 있고 최신 테크를 기반으로 제품을 만드는 회사인 점을 먼저 어필하고 싶네요.</p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>금전적 보상 기회</h3>
+          <p>초기 멤버로 조인하시는 만큼 좋은 조건의 스톡옵션 패키지를 제공해드릴 계획이고, 회사가 성공시에 보통 직장 생활보단 훨씬 더 높은 수익을 기대할 수 있습니다.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>빠른 성장</h3>
+          <p>행정적인 절차에 구애되지 않고 정말 내 성장에 기여하는 일만을 위주로 할 수 있기에, 보통 회사보단 훨씬 더 빠른 스킬 레벨업이 가능합니다.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🌍</div>
+          <h3>임팩트있는 일</h3>
+          <p>규모있는 회사에서 일해보셨다면 제 일이 큰 그림에선 거의 보이지 않는 작은 부품 정도로 전락하게 되는걸 경험하셨을텐데요, 스타트업에선 매일하는 업무가 제품과 회사에 바로바로 눈에 띄는 결과가 있는 것을 확인하실 수 있습니다!</p>
+        </div>
+      </div>
+    </section>
+    
+    <div class="white-spacer"></div>
+    
+    <section class="process-container">
+      <h1 class="title">합류 과정</h1>
+      <p class="subtitle">각 단계에서 결과 발표는 24시간 내에 해드립니다!</p>
+      
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" x2="8" y1="13" y2="13"/>
+              <line x1="16" x2="8" y1="17" y2="17"/>
+              <line x1="10" x2="8" y1="9" y2="9"/>
+            </svg>
+          </div>
+          <div class="card-number">1</div>
+          <div class="card-name">서류</div>
+          <div class="card-desc">이력서 및 자기소개 심사</div>
+        </div>
+        
+        <div class="process-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="card-number">2</div>
+          <div class="card-name">1차 면접</div>
+          <div class="card-desc">팀 핏과 기본 역량 확인</div>
+        </div>
+        
+        <div class="process-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="card-number">3</div>
+          <div class="card-name">비대면 코딩 테스트</div>
+          <div class="card-desc">실무 관련 코딩 과제</div>
+        </div>
+        
+        <div class="process-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake">
+              <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/>
+              <path d="M12 5.36 8.87 8.5a2.13 2.13 0 0 0 0 3h0a2.13 2.13 0 0 0 3 0l2.26-2.21a2.13 2.13 0 0 1 3 0h0a2.13 2.13 0 0 1 0 3l-2.26 2.21"/>
+            </svg>
+          </div>
+          <div class="card-number">4</div>
+          <div class="card-name">최종 면접</div>
+          <div class="card-desc">경영진 면접 및 처우 협의</div>
+        </div>
+      </div>
+      
+      <div class="apply-section">
+        <a href="mailto:mjoo@apeirocorp.com" class="apply-button">지금 지원하기</a>
+        <p class="apply-note">관심있으신 분들은 <a href="mailto:mjoo@apeirocorp.com" class="email-link">mjoo@apeirocorp.com</a> 으로 짧은 자기소개 + 이력서를 보내주세요!</p>
+        <p class="closing">🏴‍☠️ 그럼 조만간 인사드릴 수 있으면 좋겠습니다. 아페로에 관심을 가져주셔서 다시 한 번 감사드려요! 🏴‍☠️</p>
+      </div>
+    </section>
+    
+    <div class="white-spacer"></div>
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+  /* Component structure styling */
+  .component-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .white-spacer {
+    height: 12px;
+    background-color: white;
+  }
+  
+  /* Global section styling */
+  .career-container,
+  .benefits-container,
+  .process-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+
+  /* Typography */
+  .title {
+    color: var(--Black, #000);
+    font-family: "Spoqa Han Sans Neo", system-ui, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-align: center;
+    word-break: keep-all;
+  }
+  
+  .subtitle {
+    color: var(--Black, #000);
+    font-family: "Spoqa Han Sans Neo", system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    text-align: center;
+    max-width: 800px;
+    word-break: keep-all;
+  }
+  
+  h2 {
+    color: var(--Black, #000);
+    font-family: "Spoqa Han Sans Neo", system-ui, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  h3 {
+    color: var(--Black, #000);
+    font-family: "Spoqa Han Sans Neo", system-ui, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  p {
+    color: var(--Gray, #555);
+    font-family: "Spoqa Han Sans Neo", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    word-break: keep-all;
+  }
+  
+  /* Now Hiring Badge */
+  .now-hiring-badge {
+    position: relative;
+    background-color: #F43F5E;
+    color: white;
+    font-family: "Spoqa Han Sans Neo", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+  }
+  
+  .now-hiring-badge .pulse {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+  }
+  
+  .now-hiring-badge .text {
+    letter-spacing: 0.05em;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  /* Warning banner */
+  .warning-banner {
+    background-color: #FEF2F2;
+    color: #B91C1C;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 0 auto 40px;
+    font-weight: 500;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(185, 28, 28, 0.1);
+  }
+  
+  /* Job details section */
+  .job-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .job-section {
+    margin-bottom: 32px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: var(--Gray, #555);
+    font-family: "Spoqa Han Sans Neo", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  li:before {
+    content: "•";
+    color: #4d21fc;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Benefits section */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .benefit-card {
+    background-color: #f8fafc;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  .benefit-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  
+  /* Process timeline - horizontal on desktop */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Change to 4 columns for desktop */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Increase width to accommodate 4 cards */
+    margin: 40px auto;
+  }
+  
+  .process-card {
+    /* Keep existing styles */
+    background: white;
+    border-radius: 18px;
+    padding: 30px 15px; /* Slightly reduce horizontal padding to fit cards better */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(166, 213, 255, 0.4);
+  }
+  
+  .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(167, 243, 208, 0.8) 0%, rgba(166, 213, 255, 0.8) 100%);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .card-icon svg {
+    width: 42px;
+    height: 42px;
+    stroke: #0055A4; 
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card-number {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF9B55 0%, #4E95E3 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(166, 213, 255, 0.6);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Apply section */
+  .apply-section {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .apply-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #A6D5FF 0%, #A7F3D0 100%);
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(166, 213, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Spoqa Han Sans Neo", system-ui, sans-serif;
+  }
+  
+  .apply-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(166, 213, 255, 0.6);
+  }
+  
+  .apply-note {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #555;
+  }
+  
+  .email-link {
+    color: #A6D5FF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .closing {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 32px;
+  }
+  
+  /* New styles */
+  .card-name {
+  font-size: 18px;
+  font-weight: 700; /* Make it bold */
+  margin-bottom: 8px;
+  color: #222;
+  word-break: keep-all;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #666;
+  word-break: keep-all;
+  line-height: 1.4;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+  /* Tablet view - 2x2 grid */
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  /* Keep process grid at 2 columns even on smaller screens */
+  .process-grid {
+    gap: 20px;
+  }
+  
+  .card-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .card-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .career-container,
+  .benefits-container,
+  .process-container {
+    padding: 40px 20px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+  
+  /* Update the process grid to be a single column on mobile */
+  .process-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 30px; /* Increased gap for better separation between vertical cards */
+  }
+  
+  /* Optimize card display for vertical layout */
+  .process-card {
+    padding: 30px 20px; /* Restore horizontal padding since we have more space */
+  }
+  
+  .card-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .apply-button {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+  
+  .card-name {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .card-desc {
+    max-width: 95%;
+  }
+}
+</style>

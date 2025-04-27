@@ -1,0 +1,209 @@
+---
+import astroLogo from '../assets/astro.svg';
+---
+
+<div class="container">
+  <div class="gradient-background">
+    <div class="apple-gradient">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="blob blob3"></div>
+    </div>
+  </div>
+  
+  <main>
+    <p class="korean-copy">
+      이곳은 개인의 상상력이 모여 훌륭한 작업을 이끄는 가치에 헌신하는 곳입니다. 여기서는 단순히 합류하는 것이 아니라, <span class="highlight">당신만의 색깔로 세상을 바꿔나갈 것입니다.</span>
+    </p>
+  </main>
+</div>
+
+<style>
+  @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --primary: #4d21fc;
+    --secondary: #7828c8;
+    --accent: #f41cf4;
+    --background: #F8FAFC;
+    --text: #000000;
+    --text-light: #ffffff;
+    --text-muted: rgba(0, 0, 0, 0.9);
+    --radius: 12px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    --gradient-scale-mid: 0.6;
+    --gradient-scale-final: 1.1;
+  }
+
+  /* Container layout with responsive height */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 650px; /* Fixed height instead of vh for better control */
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Updated gradient background */
+  .gradient-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #F8FAFC;
+    overflow: hidden;
+  }
+
+  .apple-gradient {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    filter: saturate(1.05);
+    will-change: transform, opacity;
+  }
+
+  .blob {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.2);
+    filter: blur(100px);
+    animation: blob-expand 4s ease-out forwards, blob-drift 14s ease-in-out infinite alternate;
+  }
+
+  .blob1 {
+    background: radial-gradient(circle at 25% 30%, #A6D5FF 0%, transparent 75%);
+    animation-delay: 0s;
+  }
+
+  .blob2 {
+    background: radial-gradient(circle at 70% 65%, #FFD1A6 0%, transparent 70%);
+    animation-delay: 0.5s;
+  }
+
+  .blob3 {
+    background: radial-gradient(circle at 80% 20%, #A7F3D0 0%, transparent 75%);
+    animation-delay: 0.3s;
+  }
+
+  @keyframes blob-expand {
+    0% {
+      opacity: 0;
+      transform: scale(0.2);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.4);
+    }
+  }
+
+  @keyframes blob-drift {
+    from {
+      transform: translate3d(0px, 0px, 0) scale(1.4);
+    }
+    to {
+      transform: translate3d(10px, -10px, 0) scale(1.5);
+    }
+  }
+
+  /* Add soft noise texture */
+  .apple-gradient::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .korean-copy {
+    font-size: clamp(28px, 5.5vw, 42px);
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 600;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: var(--text-muted);
+    font-family: 'Spoqa Han Sans Neo', system-ui, sans-serif;
+    word-break: keep-all;
+    letter-spacing: -0.02em;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  }
+
+  .highlight {
+    color: #000;
+    position: relative;
+    font-weight: 700;
+  }
+
+  /* Position the text */
+  main {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Responsive adjustments for devices */
+  @media (min-width: 768px) {
+    /* Tablet */
+    .container {
+      min-height: 500px;
+    }
+    
+    .korean-copy {
+      font-size: clamp(32px, 6vw, 48px);
+      max-width: 900px;
+      line-height: 1.4;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Desktop */
+    .container {
+      min-height: 100vh;
+    }
+    
+    .korean-copy {
+      font-size: clamp(38px, 7vw, 58px);
+      max-width: 1100px;
+      line-height: 1.35;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Small mobile */
+    .container {
+      min-height: 450px;
+    }
+    
+    .korean-copy {
+      font-size: clamp(24px, 5vw, 32px);
+      line-height: 1.6;
+      padding: 0 15px;
+    }
+  }
+</style>

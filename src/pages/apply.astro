@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AppleMesh4 from '../components/AppleMesh4.astro';
+---
+
+<Layout title="Apply - Your Company">
+  <main>
+    <AppleMesh4 />
+    
+    <section class="apply-content">
+      <div class="container">
+        <h2>Apply Now</h2>
+        <p>We're excited to learn more about you. Please fill out the application form below to get started.</p>
+        
+        <form class="application-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="position">Position</label>
+            <select id="position" name="position" required>
+              <option value="" disabled selected>Select a position</option>
+              <option value="developer">Software Developer</option>
+              <option value="designer">UI/UX Designer</option>
+              <option value="product">Product Manager</option>
+              <option value="marketing">Marketing Specialist</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="resume">Resume/CV</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+            <small>PDF, DOC or DOCX format (Max 5MB)</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Why do you want to join our team?</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-button">Submit Application</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .apply-content {
+    padding: 4rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .application-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #f8f9fa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4d21fc;
+    box-shadow: 0 0 0 3px rgba(77, 33, 252, 0.15);
+  }
+  
+  small {
+    display: block;
+    color: #666;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .submit-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4d21fc 0%, #7828c8 100%);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(77, 33, 252, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(77, 33, 252, 0.35);
+  }
+  
+  .submit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(77, 33, 252, 0.25);
+  }
+  
+  @media (min-width: 768px) {
+    .submit-button {
+      width: auto;
+    }
+    
+    .application-form {
+      padding: 2.5rem;
+    }
+  }
+</style>

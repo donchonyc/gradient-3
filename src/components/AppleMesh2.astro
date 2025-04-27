@@ -1,0 +1,332 @@
+---
+import astroLogo from '../assets/astro.svg';
+---
+
+<div class="container">
+  <div class="gradient-background">
+    <div class="apple-gradient">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="blob blob3"></div>
+    </div>
+  </div>
+  
+  <div class="iphone-grid-container">
+    <img 
+      src="/iphone-grid2.png"
+      srcset="
+        /iphone-grid2.png 320w,
+        /iphone-grid2@2x.png 640w,
+        /iphone-grid2@3x.png 960w"
+      sizes="(max-width: 480px) 280px,
+             (max-width: 768px) 320px,
+             (max-width: 1024px) 380px,
+             420px"
+      alt="iPhone App Grid" 
+      class="iphone-grid-image">
+  </div>
+  
+  <main>
+    <h1>언어와 함께, <br /> 더 효율적으로</h1>
+  </main>
+</div>
+
+<style>
+  @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --primary: #4d21fc;
+    --secondary: #7828c8;
+    --accent: #f41cf4;
+    --background: #F8FAFC;
+    --text: #000000;
+    --text-light: #ffffff;
+    --text-muted: rgba(0, 0, 0, 0.7);
+    --radius: 12px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    --gradient-scale-mid: 0.6;
+    --gradient-scale-final: 1.1;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --gradient-scale-mid: 0.8;
+      --gradient-scale-final: 1.15;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --gradient-scale-mid: 0.9;
+      --gradient-scale-final: 1.2;
+    }
+  }
+
+  @media (max-width: 480px) {
+    :root {
+      --gradient-scale-mid: 0.6;
+      --gradient-scale-final: 1.1;
+    }
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Spoqa Han Sans Neo', 'Inter', system-ui, sans-serif;
+  }
+
+  /* Container layout with responsive height */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 650px; /* Fixed height instead of vh for better control */
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Updated gradient background */
+  .gradient-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #F8FAFC;
+    overflow: hidden;
+  }
+
+  .apple-gradient {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    filter: saturate(1.05);
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0;
+    transform-origin: center;
+    animation: blob-appear 3s ease-out forwards;
+  }
+
+  .blob1 {
+    background: #A7F3D0;
+    width: 60%;
+    height: 60%;
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+    animation-name: blob-appear, blob-float-1;
+    animation-duration: 3s, 18s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, none;
+    animation-direction: normal, alternate;
+  }
+
+  .blob2 {
+    background: #FFD1A6;
+    width: 70%;
+    height: 70%;
+    right: 5%;
+    top: 30%;
+    animation-delay: 0.3s;
+    animation-name: blob-appear, blob-float-2;
+    animation-duration: 3s, 15s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, none;
+    animation-direction: normal, alternate;
+  }
+
+  .blob3 {
+    background: #A6D5FF;
+    width: 65%;
+    height: 65%;
+    left: 25%;
+    bottom: 10%;
+    animation-delay: 0.6s;
+    animation-name: blob-appear, blob-float-3;
+    animation-duration: 3s, 20s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, none;
+    animation-direction: normal, alternate;
+  }
+
+  @keyframes blob-appear {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes blob-float-1 {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-5%, -10%) scale(1.1);
+    }
+    100% {
+      transform: translate(5%, 5%) scale(0.95);
+    }
+  }
+
+  @keyframes blob-float-2 {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(-7%, 5%) scale(0.9);
+    }
+    66% {
+      transform: translate(4%, -5%) scale(1.05);
+    }
+    100% {
+      transform: translate(2%, 8%) scale(0.97);
+    }
+  }
+
+  @keyframes blob-float-3 {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    40% {
+      transform: translate(6%, -4%) scale(1.08);
+    }
+    70% {
+      transform: translate(-3%, -8%) scale(0.92);
+    }
+    100% {
+      transform: translate(4%, 6%) scale(1.03);
+    }
+  }
+
+  /* Add soft noise texture */
+  .apple-gradient::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: overlay;
+  }
+
+  h1 {
+    font-size: clamp(32px, 7vw, 58px);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-family: -apple-system, 'SF Pro Display', 'Spoqa Han Sans Neo', system-ui, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Position the text above the phone */
+  main {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 70px; /* Reduced space for all devices by default */
+  }
+
+  /* Reposition iPhone grid image like in reference */
+  .iphone-grid-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .iphone-grid-image {
+    width: 85%;
+    max-width: 220px; /* Smaller by default */
+    height: auto;
+    display: block;
+  }
+
+  /* Responsive adjustments for devices */
+  @media (min-width: 768px) {
+    /* Tablet */
+    .container {
+      min-height: 500px; /* Much shorter on tablets */
+    }
+    
+    .iphone-grid-image {
+      max-width: 300px;
+    }
+    
+    main {
+      margin-bottom: 90px;
+    }
+    
+    h1 {
+      font-size: clamp(42px, 7.5vw, 86px);
+      line-height: 1.1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Desktop */
+    .container {
+      min-height: 100vh; /* Full height on desktop */
+    }
+    
+    .iphone-grid-image {
+      max-width: 420px;
+      width: 65%;
+    }
+    
+    main {
+      margin-bottom: 200px; /* More space on desktop */
+    }
+    
+    h1 {
+      font-size: clamp(48px, 8vw, 112px);
+      line-height: 1.05;
+      padding: 0 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Small mobile */
+    .container {
+      min-height: 450px; /* Much shorter height for mobile */
+    }
+    
+    .iphone-grid-image {
+      max-width: 200px; /* Even smaller on mobile */
+    }
+    
+    main {
+      margin-bottom: 50px; /* Much less margin on mobile */
+    }
+  }
+</style>

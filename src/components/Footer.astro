@@ -28,9 +28,9 @@
       <div class="footer-column">
         <h3>Company</h3>
         <ul>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">LinkedIn</a></li>
+          <li><a href="/company">About us</a></li>
+          <li><a href="/career">Careers</a></li>
+          <li><a href="https://www.linkedin.com/company/apeirocorp">LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -66,11 +66,22 @@
   
   .footer-columns {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 3rem;
   }
   
   .footer-column {
     margin-right: 96px; /* 96px between columns */
+    min-height: 150px; /* Ensure consistent height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px; /* Match height with other columns */
   }
 
   .company-name {
@@ -88,6 +99,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    margin-top: auto; /* Push to bottom of column */
   }
 
   .address {
@@ -109,22 +121,35 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1; /* Fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   
   .footer-column li {
-    margin-bottom: 8px; /* 8px vertical margin between items */
+    margin-bottom: 12px; /* Increased vertical margin between items */
   }
   
   .footer-column a {
     color: white;
     text-decoration: none;
+    padding: 4px 0; /* Larger touch target */
+    display: inline-block;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
   }
   
   .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .apeiro {
@@ -140,5 +165,69 @@
   
   .footer-legal p {
     margin: 0;
+  }
+
+  /* Responsive styling */
+  @media (max-width: 900px) {
+    .footer-columns {
+      gap: 2rem;
+    }
+    
+    .footer-column {
+      margin-right: 50px; /* Less space between columns */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-columns {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    
+    .footer-column {
+      margin-right: 0;
+      min-height: auto; /* Reset min-height */
+    }
+    
+    .company-info {
+      min-height: auto;
+      margin-bottom: 1rem;
+      gap: 1.5rem;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+    
+    .footer-legal {
+      text-align: center;
+      max-width: 90%;
+      line-height: 1.5;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 1.5rem 0;
+    }
+    
+    .footer-content {
+      padding: 0 1.5rem;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .apeiro {
+      font-size: 1.25rem;
+    }
+    
+    .footer-legal p {
+      font-size: 0.7rem;
+      word-spacing: 0.5px;
+    }
   }
 </style>
